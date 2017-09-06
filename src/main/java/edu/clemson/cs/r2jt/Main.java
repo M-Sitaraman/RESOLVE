@@ -86,6 +86,8 @@ public class Main {
                     && !compileEnvironment.flags.isFlagSet(FLAG_HELP)) {
 
                 for (int i = 0; i < args.length; i++) {
+
+
                     if (args[i].equals("-showBuild")) {
                         compileEnvironment.setShowBuildFlag();
                     }
@@ -132,6 +134,12 @@ public class Main {
                     }
                     else {
                         files.add(getAbsoluteFile(args[i]));
+                    }
+
+                    if (files.size() == 1) {
+                        boolean x = files.get(0).exists();
+                        int b;
+                        b = 0;
                     }
                 }
 
